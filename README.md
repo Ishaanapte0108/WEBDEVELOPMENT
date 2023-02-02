@@ -1,2 +1,0 @@
-# WEBDEVELOPMENT
-practice web dev
