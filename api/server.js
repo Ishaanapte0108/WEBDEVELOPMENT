@@ -54,5 +54,5 @@ app.put('/todo/update/:id', async (req, res) => {
 
 	res.json(todo);
 });
-
+console.log('test')
 app.listen(3001, ()=>{console.log('server active at localhost 3001')});
