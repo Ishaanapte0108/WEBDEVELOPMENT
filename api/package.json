@@ -1,19 +1,19 @@
 {
-  "name": "react-todo-api",
+  "name": "todoes",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon"
   },
-  "author": "Tyler Potts",
+  "author": "Ishaan",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "mongoose": "^5.13.2"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.9"
+    "eros": "^0.0.1",
+    "express": "^4.18.2",
+    "mongoose": "^6.9.0",
+    "nodemon": "^2.0.20"
   }
 }

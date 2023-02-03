@@ -7,10 +7,8 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-mongoose.connect('mongodb://127.0.0.1:27017/react-todo', {
-	useNewUrlParser: true, 
-	useUnifiedTopology: true 
-}).then(() => console.log("Connected to MongoDB")).catch(console.error);
+mongoose.set('strictQuery', false)
+mongoose.connect('mongodb://127.0.0.1/test2', ()=> {console.log('Connected')})
 
 // Models
 const Todo = require('./models/Todo');
@@ -57,4 +55,4 @@ app.put('/todo/update/:id', async (req, res) => {
 	res.json(todo);
 });
 
-app.listen(3001);
+app.listen(3001, ()=>{console.log('server active at localhost 3001')});
