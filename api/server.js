@@ -8,7 +8,8 @@ app.use(express.json());
 app.use(cors());
 
 mongoose.set('strictQuery', false)
-mongoose.connect('mongodb://127.0.0.1/test2', ()=> {console.log('Connected')})
+// mongoose.connect('mongodb://127.0.0.1/test2', ()=> {console.log('Connected')})
+mongoose.connect('mongodb+65.0.14.189:27017://ishaan:masterPassword@0108@trialcluster.spns5qz.mongodb.net/test2', ()=> {console.log('Connected to mongo server')})
 
 // Models
 const Todo = require('./models/Todo');
@@ -54,5 +55,4 @@ app.put('/todo/update/:id', async (req, res) => {
 
 	res.json(todo);
 });
-console.log('test')
 app.listen(3001, ()=>{console.log('server active at localhost 3001')});
